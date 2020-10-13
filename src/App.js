@@ -6,7 +6,7 @@ function App() {
     const [word, setWord] = useState('');
     const [results, setResults] = useState([]);
     const [popoverOpen, setPopoverOpen] = useState(false);
-    const paragraph = 'Master mind test final';
+    const paragraph = 'The topic sentence should identify the main idea and point of paragraph';
 
     useEffect(() => {
         if (word.length > 0) {
@@ -66,7 +66,7 @@ function App() {
                 {results.length > 0 &&
                 <PopoverBody>
                     <p>{results[0].partOfSpeech}:</p>
-                    {results[0].definition}
+                    <p>{results[0].definition}</p>
                 </PopoverBody>}
                 {results.length <= 0 && <PopoverBody>Loading definition...</PopoverBody>}
             </Popover>
